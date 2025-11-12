@@ -4,9 +4,9 @@ Suite Setup  Open And Configure Browser
 Suite Teardown  Close Browser
 
 *** Test Cases ***
-When button pressed twice the counter is two
+Value becomes 10 when the counter is set to 10
     Go To  ${HOME_URL}
     Click Button  Nollaa
-    Click Button  Paina
-    Click Button  Paina
-    Page Should Contain  nappia painettu 2 kertaa
+    Input Text  set_value   10
+    Click Button  Aseta
+    Page Should Contain  nappia painettu 10 kertaa
